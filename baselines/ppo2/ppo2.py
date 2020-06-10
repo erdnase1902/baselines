@@ -77,6 +77,9 @@ def learn(*, network, env, total_timesteps, eval_env = None, seed=None, nsteps=2
 
     '''
 
+    lr = lambda alpha: alpha*0.00025
+    cliprange = lambda alpha: alpha*0.1
+
     set_global_seeds(seed)
 
     if isinstance(lr, float): lr = constfn(lr)
