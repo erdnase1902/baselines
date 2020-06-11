@@ -81,7 +81,7 @@ def learn(*, network, env, total_timesteps, eval_env = None, seed=None, nsteps=2
     cliprange = lambda alpha: alpha*0.1
 
     lr = lambda alpha: 0.00025
-    cliprange = lambda alpha: 0.1
+    cliprange = lambda alpha: float("inf")
 
     set_global_seeds(seed)
 
